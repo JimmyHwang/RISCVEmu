@@ -22,8 +22,9 @@ public:
 
 	virtual void reset(word_t pc);
 	virtual bool tick(MemoryMap* mm);
+#if ENABLE_GUI
 	virtual void gui();
-
+#endif
 	virtual PrivLevel::Enum getPrivilegeLevel();
 	virtual word_t getPC();
 	virtual word_t getRegister(uint32_t reg);

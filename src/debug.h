@@ -1,6 +1,11 @@
 #ifndef DEBUG_H
 #define DEBUG_H
 
+#define ENABLE_DISASM             0
+#define ENABLE_GUI                0
+#define ENABLE_BX                 0
+#define RISCV_CONFIG_DEBUG		  0
+
 #ifndef RISCV_CONFIG_DEBUG
 #define RISCV_CONFIG_DEBUG 1
 #endif

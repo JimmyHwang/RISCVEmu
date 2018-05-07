@@ -3,7 +3,9 @@
 #include "../cache.h"
 #include "../../debug.h"
 #include "../../math.h"
+#if ENABLE_GUI
 #include "../../imgui/imgui.h"
+#endif
 #include <bx/bx.h>
 #include <bx/string.h>
 
@@ -795,6 +797,7 @@ void MultiCycleCache::mmuPageTableWalk()
 	}
 }
 
+#if ENABLE_GUI
 void MultiCycleCache::gui()
 {
 	// NOTE: Should match Stage::Enum
@@ -873,5 +876,6 @@ void MultiCycleCache::gui()
 		ImGui::PopItemWidth();
 	}
 }
+#endif
 } // namespace cpu
 } // namespace riscv

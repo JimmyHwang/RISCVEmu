@@ -3,6 +3,7 @@
 
 #include <stdint.h>
 
+#if ENABLE_DISASM
 namespace riscv
 {
 class ICPU;
@@ -13,4 +14,5 @@ void disasmGetInstrOperandValues(ICPU* cpu, MemoryMap* mem, uint32_t instr, uint
 const char* disasmGetRegisterABIName(uint32_t reg);
 }
 
+#endif
 #endif

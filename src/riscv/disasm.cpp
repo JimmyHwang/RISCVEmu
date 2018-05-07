@@ -4,6 +4,7 @@
 #include "../debug.h"
 #include <bx/string.h>
 
+#if ENABLE_DISASM
 namespace riscv
 {
 static const char* s_RegABIName[32] = {
@@ -537,3 +538,4 @@ void disasmGetInstrOperandValues(ICPU* cpu, MemoryMap* mm, uint32_t ir, uint32_t
 	}
 }
 }
+#endif

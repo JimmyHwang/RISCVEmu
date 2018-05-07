@@ -2,6 +2,7 @@
 #include "../debug.h"
 #include <malloc.h>
 #include <stdio.h>
+#include <bx/bx.h>
 
 namespace riscv
 {

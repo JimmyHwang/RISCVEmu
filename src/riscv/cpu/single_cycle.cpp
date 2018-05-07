@@ -32,6 +32,8 @@ void SingleCycle::reset(word_t pc)
 
 bool SingleCycle::tick(MemoryMap* mm)
 {
+    uint32_t opcode = 0;
+  
 	// Clear the breakpoint output
 	m_NextState.m_Breakpoint = false;
 
@@ -44,7 +46,7 @@ bool SingleCycle::tick(MemoryMap* mm)
 	}
 
 	// Opcode is common to all instruction types.
-	const uint32_t opcode = instr.R.opcode;
+	opcode = instr.R.opcode;
 	if ((opcode & 3) != 3) {
 		raiseException(Exception::IllegalInstruction);
 		goto next_tick;
